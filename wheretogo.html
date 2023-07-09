@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Where to Go - Kuwait</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .countries-heading {
+      font-size: 36px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .country {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 28px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background-color 0.3s, color 0.3s, cursor 0.3s;
+    }
+
+    .country:hover {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    .places {
+      display: none;
+      text-align: center;
+    }
+
+    .place {
+      display: inline-block;
+      width: 250px;
+      margin: 20px;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .place:hover {
+      transform: scale(1.05);
+    }
+
+    .place-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .place-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .place-details {
+      display: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .place-description {
+      color: #777;
+      margin-bottom: 10px;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .place-location {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .place-photos {
+      display: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .place-photo {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .rating {
+      margin-top: 10px;
+      font-size: 24px;
+      color: #FFC107;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function togglePlacesVisibility() {
+      var places = document.getElementById('places');
+      var placesDisplay = places.style.display;
+      places.style.display = placesDisplay === 'block' ? 'none' : 'block';
+    }
+
+    function showPlaceDetails() {
+      var placeDetails = document.getElementById('place-details-1');
+      var placePhotos = document.getElementById('place-photos-1');
+      var placeDetailsDisplay = placeDetails.style.display;
+      var placePhotosDisplay = placePhotos.style.display;
+
+      if (placeDetailsDisplay === 'block') {
+        placeDetails.style.display = 'none';
+        placePhotos.style.display = 'none';
+      } else {
+        placeDetails.style.display = 'block';
+        placePhotos.style.display = 'block';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Where to Go</h1>
+  </header>
+  <main>
+    <h2 class="countries-heading">Countries</h2>
+    <ul id="countries">
+      <li class="country" onclick="togglePlacesVisibility()">Kuwait</li>
+    </ul>
+
+    <div id="places" class="places">
+      <h2>Places in Kuwait</h2>
+      <div class="place" onclick="showPlaceDetails()">
+        <img class="place-image" src="https://www.urtrips.com/wp-content/uploads/2022/06/souk-mubarakiya-kuwait.jpg" alt="Al-Mubarakiyah">
+        <h3 class="place-name">Al-Mubarakiyah</h3>
+        <div class="rating">
+          Rating: 4.5
+        </div>
+      </div>
+    </div>
+
+    <div id="place-details-1" class="place-details">
+      <p class="place-description">Mubarakiya is an old traditional Kuwaiti market, and it is one of the most famous and best places that every tourist should visit in Kuwait. It offers a vibrant and lively atmosphere where visitors can explore various shops, street vendors, and traditional restaurants. The market is known for its authentic Kuwaiti goods, including clothing, accessories, spices, and handicrafts. It is also a great place to experience the rich cultural heritage of Kuwait.</p>
+      <p class="place-location">Location: <a href="https://goo.gl/maps/R8NA3FDaFv7xAnCS8" target="_blank">View on Google Maps</a></p>
+      <div id="place-photos-1" class="place-photos">
+        <img class="place-photo" src="https://news.gov.kw/Files/News/SREPORTS/2b519531-a4ac-4008-9bf3-76149141aeb7.jpg" alt="Photo 1">
+        <img class="place-photo" src="https://s.alqabas.com/wp-content/uploads/2019/01/1-195.jpg" alt="Photo 2">
+        <img class="place-photo" src="https://www.kuna.net.kw/NewsPictures/2023/2/5/966fc2c2-c555-4f87-a407-300a420bdbf8.jpg" alt="Photo 3">
+        <img class="place-photo" src="https://cdn4.premiumread.com/?url=https://www.alroeya.com/uploads/images/2022/04/01/1529776.jpg&w=w850&q=100&f=jpg" alt="Photo 4">
+      </div>
+    </div>
+  </main>
+</body>
+</html>
